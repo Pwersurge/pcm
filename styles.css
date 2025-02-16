@@ -1,0 +1,131 @@
+/* Main styling for the theme */
+
+html {
+    font-family:Electrolize, serif;
+    font-size: 20px;
+    color:white;
+    background-color:#064929;
+}
+
+/* Header & nav styling */
+header {
+    position: sticky;
+    top: 0;
+    height: 101px;
+    background-color: #064929;
+    border-bottom: 1px solid white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+nav {
+    margin-left:auto;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/** Upper right logo **/
+#logo {
+    height:100px;
+    width:100px;
+    margin: 9.5px 9.5px;
+    margin-left: 10px;
+}
+
+/** Splash Page **/
+
+.bigassbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.splashpage {
+   background-image: url('images/splasher.png');
+   background-size: cover;
+   width: 1200px;
+   height: 1200px;
+   margin: 0 auto; /* center the box */
+   display: flex; /* center the text */
+   justify-content: center; /* center the text on main axis */
+   align-items:center; /* center the text on cross axis */
+}    
+
+.getinside {
+  display: flex;
+  align-items: flex-end; /* Aligns the content to the bottom */
+  height: 100%; /* Ensures the div takes the full height of its parent */
+  font-size: 2em;
+  color: greenyellow
+}
+
+/** footer **/
+
+footer {
+   background-color: #064929;
+}
+
+/** Tinos: CSS classes for the Tinos font */
+
+.tinos-bold {
+    font-family: "Tinos", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+.tinos-bold-italic {
+    font-family: "Tinos", serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+
+/** Newsreader: CSS class for a variable style */
+
+
+.newsreader-pwersurge {
+    font-family: "Newsreader", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+  }
+
+ /** Jersey 10: CSS class **/
+
+.jersey-10-regular {
+    font-family: "Jersey 10", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+/** Rampart One: CSS class **/
+
+.rampart-one-regular {
+    font-family: "Rampart One", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+/** Silkscreen: CSS class **/
+
+.silkscreen-regular {
+    font-family: "Silkscreen", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+/** Electrolize: CSS class **/
+
+.electrolize-regular {
+    font-family: "Electrolize", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  

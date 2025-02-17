@@ -2,8 +2,8 @@
 
 html {
     font-family:Electrolize, serif;
-    font-size: 20px;
-    color:white;
+    font-size: 18px;
+    color:;
     background-color:#064929;
 }
 
@@ -24,11 +24,11 @@ nav {
 }
 
 nav ul {
-    display: flex;
-    gap: 30px;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+  display: flex;
+  gap: 30px; /* Adjust the gap between links as needed */
+  list-style-type: none; /* Remove default list styling */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
 }
 
 /** Upper right logo **/
@@ -65,29 +65,6 @@ nav ul {
   height: 100%; /* Ensures the div takes the full height of its parent */
   font-size: 2em;
   color: greenyellow
-}
-
-.simplebox {
-  width: 1200px;
-  height: 700px;
-  margin: 0 auto; /* center the box */
-  display: flex; /* center the text */
-  justify-content: center; /* center the text on main axis */
-  align-items:center; /* center the text on cross axis */
-}
-
-.textinsimplebox {
-  height: 100px;
-  width: 1200px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.textinsimplebox h1 {
-  font-size: 2em;
-  color: greenyellow;
 }
 
 /** splash page footer **/

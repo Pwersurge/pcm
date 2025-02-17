@@ -67,7 +67,30 @@ nav ul {
   color: greenyellow
 }
 
-/** footer **/
+.simplebox {
+  width: 1200px;
+  height: 700px;
+  margin: 0 auto; /* center the box */
+  display: flex; /* center the text */
+  justify-content: center; /* center the text on main axis */
+  align-items:center; /* center the text on cross axis */
+}
+
+.textinsimplebox {
+  height: 100px;
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.textinsimplebox h1 {
+  font-size: 2em;
+  color: greenyellow;
+}
+
+/** splash page footer **/
 
 footer {
    background-color: #064929;
@@ -128,4 +151,11 @@ footer {
     font-weight: 400;
     font-style: normal;
   }
-  
+
+/** Press Start 2P: CSS class **/
+.press-start-2p-regular {
+    font-family: "Press Start 2P", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+

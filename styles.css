@@ -3,13 +3,15 @@
 html {
     font-family:Electrolize, serif;
     font-size: 18px;
-    color:;
+    color: white;
     background-color:#064929;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 /* Header & nav styling */
 header {
-    position: sticky;
     top: 0;
     height: 101px;
     background-color: #064929;
@@ -41,37 +43,67 @@ nav ul {
 
 /** Splash Page **/
 
-.bigassbox {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.splashpage {
-   background-image: url('images/splasher.png');
-   background-size: cover;
-   width: 1200px;
-   height: 1200px;
-   margin: 0 auto; /* center the box */
-   display: flex; /* center the text */
-   justify-content: center; /* center the text on main axis */
-   align-items:center; /* center the text on cross axis */
-}    
 
 .getinside {
   display: flex;
-  align-items: flex-end; /* Aligns the content to the bottom */
-  height: 100%; /* Ensures the div takes the full height of its parent */
+  align-items: center; /* Center the content vertically */
+  justify-content: center; /* Center the content horizontally */
+  padding-top: 5px;
+  padding-bottom: 5px;
   font-size: 2em;
-  color: greenyellow
+  color: greenyellow;
+  margin-bottom: 20px;
+}
+
+/** Splash page container control **/
+
+.container.supporting {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Align items to the top */
+  height: 100vh; /* Full viewport height */
+  margin: 0; /* Remove any default margin */
+  padding-bottom: 1em; /* Remove any default padding */
+}
+
+.container.supporting img {
+  max-width: 100%; /* Ensure the image is responsive */
+  height: auto; /* Maintain aspect ratio */
+  margin-top: 0; /* Remove any top margin */
+  padding-top: 0; /* Remove any top padding */
 }
 
 /** splash page footer **/
 
 footer {
-   background-color: #064929;
+  padding: 4rem 0;
+  background-color: #064929;
+  text-align: center;
 }
+
+/** Media Query for Smaller Screens **/
+@media (max-width: 768px) {
+  footer {
+      padding: 1rem 0; /* Adjust padding for smaller screens */
+  }
+
+  .getinside {
+      margin-bottom: 2px; /* Adjust margin for smaller screens */
+  }
+}
+
+/** Media Query for Bigger Screens **/
+@media (max-width: 1200px) {
+  footer {
+      padding: 3rem 0; /* Adjust padding for medium screens */
+  }
+
+  .getinside {
+      margin-bottom: 15px; /* Adjust margin for medium screens */
+  }
+}
+
 
 /** Tinos: CSS classes for the Tinos font */
 
@@ -136,3 +168,48 @@ footer {
     font-style: normal;
   }
 
+
+
+/** Fancy enter button **/
+
+.enterbutton {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 20px;
+  color: white;
+  background-color: darkgreen;
+  border: 3px solid white;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: color 0.4s ease-in-out;
+}
+
+/* Pseudo-element for the sliding effect */
+.enterbutton:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: #0ebc0e;
+  transition: left 0.4s ease-in-out;
+  z-index: 0;
+}
+
+/* Hover effect */
+.enterbutton:hover::before {
+  left: 0;
+}
+
+.enterbutton:hover {
+  color: #fff; /* Change text color on hover */
+}
+
+/* Ensure the text is above the pseudo-element */
+.enterbutton span {
+  position: relative;
+  z-index: 1;
+}

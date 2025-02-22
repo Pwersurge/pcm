@@ -1,0 +1,207 @@
+/* Main styling for the theme */
+html {
+    font-family: "Press Start 2P", serif;
+    font-size: 18px;
+    color: white;
+    background-color: #064929;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+
+
+/** Responsive adjustments **/
+
+@media (max-width: 768px) {
+
+.getinside {
+        margin-bottom: 2px; /* Adjust margin for smaller screens */
+    }
+footer {
+        padding: 1rem 0; /* Adjust padding for smaller screens */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+.getinside {
+        margin-bottom: 15px; /* Adjust margin for medium screens */
+    }
+footer {
+        padding: 3rem 0; /* Adjust padding for medium screens */
+    }
+}
+
+@media (min-width: 1201px) {
+
+    footer {
+        padding: 4rem 0;
+        background-color: #064929;
+        text-align: center;
+      }
+
+      .tinos-bold {
+        font-family: "Tinos", serif;
+        font-weight: 700;
+        font-style: normal;
+      }
+      
+      .tinos-bold-italic {
+        font-family: "Tinos", serif;
+        font-weight: 700;
+        font-style: italic;
+      }
+      
+      .newsreader-pwersurge {
+        font-family: "Newsreader", serif;
+        font-optical-sizing: auto;
+        font-weight: 600;
+        font-style: normal;
+      }
+      
+      .jersey-10-regular {
+        font-family: "Jersey 10", serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      
+      .rampart-one-regular {
+        font-family: "Rampart One", serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      
+      .silkscreen-regular {
+        font-family: "Silkscreen", serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      
+      .electrolize-regular {
+        font-family: "Electrolize", serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      
+      .press-start-2p-regular {
+        font-family: "Press Start 2P", serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+    }
+
+.container.supporting {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Align items to the top */
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove any default margin */
+    padding-bottom: 1em; /* Remove any default padding */
+  }
+
+.getinside {
+    display: flex;
+    align-items: center; /* Center the content vertically */
+    justify-content: center; /* Center the content horizontally */
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 2em;
+    color: greenyellow;
+    margin-bottom: 20px;
+  }
+
+  .container.supporting img {
+    max-width: 100%; /* Ensure the image is responsive */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 0; /* Remove any top margin */
+    padding-top: 0; /* Remove any top padding */
+  }
+
+  
+  .enterbutton {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 20px;
+    color: white;
+    background-color: darkgreen;
+    border: 3px solid white;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: color 0.4s ease-in-out;
+  }
+  
+  .enterbutton:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #0ebc0e;
+    transition: left 0.4s ease-in-out;
+    z-index: 0;
+  }
+  
+  .enterbutton:hover::before {
+    left: 0;
+  }
+  
+  .enterbutton:hover {
+    color: #fff; /* Change text color on hover */
+  }
+  
+  .enterbutton span {
+    position: relative;
+    z-index: 1;
+  }
+
+
+  .tinos-bold {
+    font-family: "Tinos", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .tinos-bold-italic {
+    font-family: "Tinos", serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+ 
+.newsreader-hello {
+    font-family: "Newsreader", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+  } 
+
+  .jersey-10-regular {
+    font-family: "Jersey 10", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .silkscreen-regular {
+    font-family: "Silkscreen", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .rampart-one-regular {
+    font-family: "Rampart One", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .electrolize-regular {
+    font-family: "Electrolize", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .press-start-2p-regular {
+    font-family: "Press Start 2P", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  

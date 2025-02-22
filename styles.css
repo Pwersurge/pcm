@@ -1,28 +1,32 @@
 /* Main styling for the theme */
-
 html {
-    font-family:Electrolize, serif;
-    font-size: 18px;
-    color: white;
-    background-color:#064929;
-    height: 100%;
-    margin: 0;
-    padding: 0;
+  font-family: Electrolize, serif;
+  font-size: 18px;
+  /*In case i want to use the color of my logo, code is #4bba5b */
+  color: #0ebc0e;
+  background-color: #064929;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-/* Header & nav styling */
-header {
-    top: 0;
-    height: 101px;
-    background-color: #064929;
-    border-bottom: 1px solid white;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+/* Header & nav styling KEEP */
+
+.main-header {
+  position: sticky;
+  top: 0;
+  z-index: 10; /* Ensure the header is above other content */
+  width: 100%;
+  background-color: #064929;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1rem; /* Add padding for spacing */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 nav {
-    margin-left:auto;
+  margin-left: auto;
 }
 
 nav ul {
@@ -33,183 +37,220 @@ nav ul {
   margin: 0; /* Remove default margin */
 }
 
-/** Upper right logo **/
-#logo {
-    height:100px;
-    width:100px;
-    margin: 9.5px 9.5px;
-    margin-left: 10px;
-}
-
-/** Splash Page **/
-
-
-.getinside {
-  display: flex;
-  align-items: center; /* Center the content vertically */
-  justify-content: center; /* Center the content horizontally */
-  padding-top: 5px;
-  padding-bottom: 5px;
-  font-size: 2em;
-  color: greenyellow;
-  margin-bottom: 20px;
-}
-
-/** Splash page container control **/
-
-.container.supporting {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; /* Align items to the top */
-  height: 100vh; /* Full viewport height */
-  margin: 0; /* Remove any default margin */
-  padding-bottom: 1em; /* Remove any default padding */
-}
-
-.container.supporting img {
+h1 {
+  font-size: 2rem;
+  color: #0ebc0e;
+  margin-left: 10px;
   max-width: 100%; /* Ensure the image is responsive */
   height: auto; /* Maintain aspect ratio */
-  margin-top: 0; /* Remove any top margin */
-  padding-top: 0; /* Remove any top padding */
 }
 
-/** splash page footer **/
+/* Container for both seconddiv and textinside to ensure they will align */
+.maindiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+.seconddiv {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 0;
+  border: 1px solid #4bba5b;
+}
+
+.seconddiv::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('images/missionstatementbackground.avif');
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(95%); /* Apply grayscale filter */
+  z-index: -1; /* Place the pseudo-element behind the content */
+}
+
+/* box styling for all boxes */
+
+.box {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin: 4rem 2rem;
+  background-color: #064929;
+  border: 10px groove #4bba5b;
+}
+
+.missionstatement,
+.gameinproduction,
+.aboutus {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.twoprojsubbox {  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px; /* Adjust the gap between columns */
+  width: 100%;
+  padding: 1rem;
+}
+
+.projsubbox1,
+.projsubbox2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+#joshi, #sports {
+  width: 200px;
+  height: 200px;
+  max-width: 100%;
+}
+
+.projsubbox1 h3, .projsubbox2 h3 {
+  font-family:'Silkscreen', serif;
+  font-size: 1.5rem; 
+  color: yellow;
+  font-style: italic;
+}
+
+.missionstatement p, .aboutus p, .projsubbox1 p, .projsubbox2 p {
+  color:whitesmoke
+}
+
+/** Responsive adjustments **/
+
+@media (max-width: 768px) {
+  .main-header {
+      flex-direction: column; /* Stack items vertically */
+      align-items: center; /* Center items horizontally */
+      padding: 0.5rem; /* Adjust padding for smaller screens */
+      text-align: center; /* Center text */
+  }
+
+  nav {
+      width: 100%; /* Ensure nav takes full width */
+      display: flex;
+      justify-content: center; /* Center nav horizontally */
+  }
+
+  nav ul {
+      flex-direction: column; /* Stack nav items vertically */
+      align-items: center; /* Center items horizontally */
+      gap: 10px; /* Adjust the gap between links */
+      width: 100%; /* Ensure ul takes full width */
+      padding: 0; /* Remove default padding */
+      margin: 0; /* Remove default margin */
+  }
+
+  h1 {
+      font-size: 1.5rem; /* Adjust font size for smaller screens */
+      margin-left: 0; /* Remove left margin */
+  }
+
+  .twoprojsubbox {
+    grid-template-columns: 1fr; /* Stack project boxes vertically on smaller screens */
+  }
+
+  footer {
+      padding: 1rem 0; /* Adjust padding for smaller screens */
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .main-header {
+      padding: 0.75rem; /* Adjust padding for medium screens */
+  }
+
+  nav ul {
+      gap: 20px; /* Adjust the gap between links */
+  }
+
+  h1 {
+      font-size: 1.75rem; /* Adjust font size for medium screens */
+  }
+
+
+  footer {
+      padding: 3rem 0; /* Adjust padding for medium screens */
+  }
+}
+
+@media (min-width: 1201px) {
+  
 footer {
   padding: 4rem 0;
   background-color: #064929;
   text-align: center;
 }
 
-/** Media Query for Smaller Screens **/
-@media (max-width: 768px) {
-  footer {
-      padding: 1rem 0; /* Adjust padding for smaller screens */
-  }
-
-  .getinside {
-      margin-bottom: 2px; /* Adjust margin for smaller screens */
-  }
-}
-
-/** Media Query for Bigger Screens **/
-@media (max-width: 1200px) {
-  footer {
-      padding: 3rem 0; /* Adjust padding for medium screens */
-  }
-
-  .getinside {
-      margin-bottom: 15px; /* Adjust margin for medium screens */
-  }
-}
-
-
-/** Tinos: CSS classes for the Tinos font */
-
 .tinos-bold {
-    font-family: "Tinos", serif;
-    font-weight: 700;
-    font-style: normal;
-  }
-  
+  font-family: "Tinos", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
 .tinos-bold-italic {
-    font-family: "Tinos", serif;
-    font-weight: 700;
-    font-style: italic;
-  }
-
-/** Newsreader: CSS class for a variable style */
-
+  font-family: "Tinos", serif;
+  font-weight: 700;
+  font-style: italic;
+}
 
 .newsreader-pwersurge {
-    font-family: "Newsreader", serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-  }
-
- /** Jersey 10: CSS class **/
+  font-family: "Newsreader", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
 
 .jersey-10-regular {
-    font-family: "Jersey 10", serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-
-/** Rampart One: CSS class **/
+  font-family: "Jersey 10", serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
 .rampart-one-regular {
-    font-family: "Rampart One", serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-
-/** Silkscreen: CSS class **/
+  font-family: "Rampart One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
 .silkscreen-regular {
-    font-family: "Silkscreen", serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-
-/** Electrolize: CSS class **/
+  font-family: "Silkscreen", serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
 .electrolize-regular {
-    font-family: "Electrolize", serif;
-    font-weight: 400;
-    font-style: normal;
-  }
+  font-family: "Electrolize", serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
-/** Press Start 2P: CSS class **/
 .press-start-2p-regular {
-    font-family: "Press Start 2P", serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-
-
-
-/** Fancy enter button **/
-
-.enterbutton {
-  position: relative;
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 20px;
-  color: white;
-  background-color: darkgreen;
-  border: 3px solid white;
-  border-radius: 10px;
-  overflow: hidden;
-  cursor: pointer;
-  transition: color 0.4s ease-in-out;
+  font-family: "Press Start 2P", serif;
+  font-weight: 400;
+  font-style: normal;
+}
 }
 
-/* Pseudo-element for the sliding effect */
-.enterbutton:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background-color: #0ebc0e;
-  transition: left 0.4s ease-in-out;
-  z-index: 0;
-}
-
-/* Hover effect */
-.enterbutton:hover::before {
-  left: 0;
-}
-
-.enterbutton:hover {
-  color: #fff; /* Change text color on hover */
-}
-
-/* Ensure the text is above the pseudo-element */
-.enterbutton span {
-  position: relative;
-  z-index: 1;
-}
